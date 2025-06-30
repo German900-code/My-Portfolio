@@ -1,0 +1,32 @@
+// $main-color: #E0E8F6;
+// $grey-color: #808080;
+// $dark-color: #000000;
+// $blue-gradient: #15779E;
+// $main-title-color: rgb(72, 78, 83);
+// $dark-color-bg: #1E1E1E;
+// $light-color-text: #e1e1e1;
+// $links-active-color: #4FC3F7;
+
+
+:root {
+    --bg-color: #E0E8F6;
+    --text-color: rgb(72, 78, 83);
+    --main-color: #E0E8F6;
+    --blue-gradient: #15779E;
+    --dark-color: #1a1a1a;
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --links-active-color: #4FC3F7;
+    --grey-color: #808080;
+}
+
+body.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --main-color: #E0E8F6;
+    --blue-gradient: #4FC3F7;
+    --dark-color: #E0E8F6;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --hover-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+    --links-active-color: #80caff;
+}

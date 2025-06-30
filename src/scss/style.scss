@@ -1,0 +1,11 @@
+@use 'normalize.css';
+@use './basic/variables.scss' as *;
+@use './basic/basic.scss';
+
+@use './blocks/header.scss';
+@use './blocks/info.scss';
+@use './blocks/about.scss';
+@use './blocks/skills.scss';
+@use './blocks/projects.scss';
+@use './blocks/touch.scss';
+@use './blocks/footer.scss';

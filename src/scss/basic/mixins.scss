@@ -1,0 +1,86 @@
+// // Миксин для hover только на устройствах с мышью
+// @mixin hover-supported {
+//     @media (hover: hover) and (pointer: fine) {
+//         &:hover {
+//             @content;
+//         }
+//     }
+// }
+
+// // Миксин для кнопки, $invert — переключает фон/текст
+// @mixin button-styles($invert: false) {
+//     background-color: if($invert, var(--text-color), var(--bg-color));
+//     color: if($invert, var(--bg-color), var(--text-color));
+//     border: none;
+//     border-radius: 8px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     cursor: pointer;
+//     box-shadow: var(--hover-shadow);
+//     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+//     @include hover-supported {
+//         background-color: var(--hover-bg);
+//     }
+
+//     &:active {
+//         transform: scale(0.98);
+//     }
+// }
+
+// @mixin button-styles($invert: false) {
+//     background-color: if($invert, var(--text-color), var(--bg-color));
+//     color: if($invert, var(--bg-color), var(--text-color));
+//     // border: none;
+//     border-radius: 8px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     cursor: pointer;
+//     box-shadow: var(--hover-shadow);
+//     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+//     &:hover {
+//         background-color: var(--dark-color);
+//         color: var(--bg-color);
+//     }
+
+//     &:active {
+//         transform: scale(0.98);
+//         background-color: var(--grey-color);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+@mixin button-styles($invert: false) {
+    background-color: if($invert, var(--text-color), var(--bg-color));
+    color: if($invert, var(--bg-color), var(--text-color));
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: var(--hover-shadow);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+    // hover внутри самого миксина
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--dark-color);
+            color: var(--bg-color);
+        }
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: var(--grey-color);
+    }
+}

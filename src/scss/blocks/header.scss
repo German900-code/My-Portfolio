@@ -1,0 +1,134 @@
+@use '../basic/variables.scss' as *;
+@use '../basic/mixins.scss' as *;
+
+
+.header {
+    margin-top: 60px;
+
+    &_div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        nav {
+            display: flex;
+            gap: 5rem;
+            flex-wrap: wrap;
+
+            // a {
+            //     text-decoration: none;
+            // font-size: 20px;
+            // }
+        }
+
+        &-btn {
+            // box-sizing: border-box;
+            // border: 2px solid var(--links-active-color);
+            // border-radius: 9px;
+            // padding: 10px;
+            // width: 130px;
+            // transition: background-color 0.3s ease, transform 0.2s ease;
+            @include button-styles;
+            // добавляем только то, чего нет в миксине
+            border: 2px solid var(--links-active-color);
+            width: 130px;
+        }
+
+    }
+}
+
+h5 {
+    color: var(--dark-color);
+    font-family: 'Oleo Script', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44px;
+}
+
+#switch {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#name {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+#hamburger_menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#menu {
+    transition: transform 3s ease;
+}
+
+.hamburger_menu.active #hamburger_icon {
+    transition: all 0.4s ease-in;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .header {
+        &_div {
+            justify-content: space-between;
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: 0;
+                // right: -100%;
+                width: 80%;
+                height: 100%;
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: right 1s ease;
+                z-index: 999;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+
+
+                transform: translateX(100%);
+                transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+                // transition: transform 0.25s ease-in-out;
+
+                &.active {
+                    // right: 0;
+                    transform: translateX(0);
+                }
+            }
+
+            &-btn {
+                display: none;
+            }
+        }
+    }
+
+    #hamburger_menu {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+
+    // #switch {
+    //     display: none;
+    // }
+}

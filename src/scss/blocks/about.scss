@@ -1,0 +1,39 @@
+@use '../basic/variables.scss' as *;
+
+.about {
+    margin-top: 100px;
+
+    &_block {
+        margin: 0 auto;
+        text-align: center;
+        width: 800px;
+    }
+
+    &_header {
+        color: var(--dark-color);
+        font-family: Inter;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 54px;
+        letter-spacing: -3%;
+    }
+
+    &_subheader {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        color: var(--blue-gradient);
+        font-family: Poppins;
+        font-size: 23px;
+    }
+
+    &_text {
+        color: var(--dark-color);
+        font-family: Inter;
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 45px;
+    }
+}
+
+
+@media (max-width: 768px) {}

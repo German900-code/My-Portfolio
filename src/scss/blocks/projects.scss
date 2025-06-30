@@ -1,0 +1,100 @@
+@use '../basic/variables.scss' as *;
+@use '../basic/basic.scss' as *;
+@use '../basic/mixins.scss' as *;
+
+.projects {
+    margin-top: 220px;
+    text-align: center;
+
+    &_title {
+        color: var(--main-title-color);
+        font-family: Inter;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 54px;
+        letter-spacing: -3%;
+    }
+
+    &_subtitle {
+        margin-top: 35px;
+        color: var(--blue-gradient);
+        font-family: Inter;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    &_buttons {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+
+        &-btn {
+            @include button-styles;
+            padding: 20px 20px;
+            // box-sizing: border-box;
+            border: 2px solid var(--links-active-color);
+            // border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            // &:hover {
+            //     background-color: var(--dark-color);
+            //     color: var(--main-color);
+            //     transform: translateY(-2px);
+            // }
+
+            // &:active {
+            //     color: var(--dark-color);
+            //     background-color: #a0a2a4;
+            // }
+        }
+    }
+
+    &_wrapper {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+
+        &-item {
+            text-align: left;
+            width: 355px;
+            height: 300px;
+
+            &-descr {
+                margin: 25px 0 15px 0;
+                color: var(--main-title-color);
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 150%;
+            }
+
+            &-text {
+                display: inline;
+                font-size: 17px;
+            }
+
+            &-btn {
+                transition: var(--main-title-color) 0.9s ease;
+                background: transparent;
+                cursor: pointer;
+                border: none;
+
+                img {
+                    transition: transform 0.4s ease, filter 0.4s ease;
+
+                    &:hover {
+                        transform: translateX(-30px) rotate(-90deg) scale(1.5);
+                        filter: brightness(0.9) drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
+                    }
+                }
+            }
+
+            &-tech {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}

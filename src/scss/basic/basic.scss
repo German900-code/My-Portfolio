@@ -1,0 +1,223 @@
+@use '../basic/variables.scss' as *;
+// @use '../basic/mixins.scss' as *;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+// :root {
+//     --bg-color: #E0E8F6;
+//     --text-color: rgb(72, 78, 83);
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    background: none;
+    border: none;
+    max-inline-size: 100%;
+}
+
+html {
+    font-family: "Barlow", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    // --bg-color: #E0E8F6;
+    // --text-color: rgb(72, 78, 83);
+    // --hover-bg: rgba(0, 0, 0, 0.05);
+    // --hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    // &.dark {
+    //     --bg-color: #1a1a1a;
+    //     --text-color: #ffffff;
+    //     --main-title-color: rgb(72, 78, 83);
+    //     --hover-bg: rgba(255, 255, 255, 0.1);
+    //     --hover-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+
+    //     .header_link,
+    //     .header_link-menu {
+    //         color: var(--text-color);
+    //     }
+    // }
+}
+
+
+
+body,
+p,
+h1,
+h2,
+h3,
+span,
+a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+// .header_link,
+// .header_link-menu {
+//     color: var(--text-color);
+//     transition: color 0.3s ease;
+// }
+
+
+
+
+
+
+// body {
+//     // font-family: 'Montserrat', sans-serif;
+//     --bg-color: #E0E8F6;
+//     --text-color: #000000;
+//     --hover-bg: rgba(0, 0, 0, 0.05);
+//     --hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+//     background-color: var(--bg-color);
+//     color: var(--text-color);
+//     transition: background-color 0.5s ease, color 0.5s ease;
+// }
+
+// body.dark {
+//     --bg-color: #1a1a1a;
+//     --text-color: #ffffff;
+//     --main-title-color: rgb(72, 78, 83);
+//     --hover-bg: rgba(255, 255, 255, 0.1);
+//     --hover-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+
+//     .header_link,
+//     .header_link-menu {
+//         color: var(--text-color);
+//     }
+// }
+
+#switch:hover {
+    background-color: var(--hover-bg);
+    box-shadow: var(--hover-shadow);
+}
+
+
+#name {
+    color: var(--text-color);
+}
+
+// .main_text {
+//     color: var(--text-color);
+// }
+
+// .skills_wrapper-card {
+//     background-color: var(--hover-bg);
+// }
+
+
+
+// button {
+//     background-color: var(--main-color);
+//     border: none;
+//     cursor: pointer;
+// }
+
+
+
+
+// button {
+//     // background-color: var(--bg-color);
+//     color: var(--text-color);
+//     border: none;
+//     border-radius: 8px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+//     cursor: pointer;
+//     box-shadow: var(--hover-shadow);
+//     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+//     &:hover {
+//         background-color: var(--hover-bg);
+//     }
+
+//     &:active {
+//         transform: scale(0.98);
+//     }
+// }
+
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    font-size: 20px;
+
+    &:hover {
+        color: var(--links-active-color);
+    }
+}
+
+
+/* Базовый стиль (ПК) */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Ноутбуки (1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 0 15px;
+    }
+}
+
+/* Планшеты (768px) */
+@media (max-width: 768px) {
+    .container {
+        // margin: 0 auto;
+        max-width: 720px;
+    }
+}
+
+/* Телефоны (576px) */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,33 @@
+@use '../basic/variables.scss' as *;
+@use '../basic/mixins.scss' as *;
+
+.footer {
+    margin-top: 40px;
+    padding: 40px;
+    border: 1px solid var(--text-color);
+
+    &_block {
+        display: flex;
+        justify-content: space-around;
+
+        &-social {
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &-img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &_rights {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        /* отступ между иконкой и текстом */
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+}
