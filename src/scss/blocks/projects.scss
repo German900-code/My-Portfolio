@@ -52,9 +52,11 @@
         margin-top: 80px;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
-        gap: 50px;
+        gap: 5rem 3rem;
 
+        // gap: 50px;
         &-item {
             text-align: left;
             width: 355px;
@@ -95,6 +97,25 @@
                 justify-content: space-between;
                 align-items: center;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        margin-top: 30px;
+
+        &_title {
+            font-size: 35px;
+        }
+
+        &_buttons {
+            flex-wrap: wrap;
+            row-gap: 2rem;
+        }
+
+        &_wrapper {
+            justify-content: center;
         }
     }
 }

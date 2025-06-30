@@ -148,3 +148,56 @@ input::placeholder {
 
     }
 }
+
+
+@media (max-width: 768px) {
+    .touch {
+        &_title {
+            font-size: 30px;
+        }
+
+        &_subtitle {
+            font-size: 20px;
+        }
+
+        &_form {
+            width: 80%;
+        }
+    }
+
+    .work_together {
+        &-title {
+            font-size: 35px;
+        }
+
+        &-gmail {
+            font-size: 15px
+        }
+
+        &-btn {
+            width: auto;
+            justify-content: space-evenly;
+        }
+
+        // &-btn {
+        //     width: 40%;
+        //     flex-wrap: wrap;
+        //     gap: 1rem;
+        // }
+    }
+}
+
+@media (max-width: 425px) {
+    .work_together {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+}
+
+// @media (max-width: 320px) {
+//     .work_together {
+//         justify-content: center;
+//     }
+// }

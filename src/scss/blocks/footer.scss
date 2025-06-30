@@ -5,6 +5,7 @@
     margin-top: 40px;
     padding: 40px;
     border: 1px solid var(--text-color);
+    border-radius: 10px;
 
     &_block {
         display: flex;
@@ -29,5 +30,21 @@
         /* отступ между иконкой и текстом */
         font-family: Arial, sans-serif;
         font-size: 16px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .footer {
+        &_block {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+        }
+
+        &_rights {
+            justify-content: space-evenly;
+        }
     }
 }

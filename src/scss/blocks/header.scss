@@ -86,6 +86,8 @@ h5 {
 
 @media (max-width: 768px) {
     .header {
+
+
         &_div {
             justify-content: space-between;
 
@@ -113,7 +115,13 @@ h5 {
                 &.active {
                     // right: 0;
                     transform: translateX(0);
+
                 }
+
+                a {
+                    color: #000000;
+                }
+
             }
 
             &-btn {

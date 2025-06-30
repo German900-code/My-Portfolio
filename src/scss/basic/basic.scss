@@ -52,12 +52,12 @@ html {
 
 
 
+
 body {
     // --bg-color: #E0E8F6;
     // --text-color: rgb(72, 78, 83);
     // --hover-bg: rgba(0, 0, 0, 0.05);
     // --hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -85,7 +85,7 @@ h2,
 h3,
 span,
 a {
-    color: var(--text-color);
+    // color: var(--dark-);
     transition: color 0.3s ease;
 }
 
@@ -209,7 +209,9 @@ a {
 /* Планшеты (768px) */
 @media (max-width: 768px) {
     .container {
-        // margin: 0 auto;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
         max-width: 720px;
     }
 }

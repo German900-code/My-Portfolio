@@ -59,15 +59,16 @@
     }
 }
 
-// @media (max-width: 425px) {}
+@media (max-width: 768px) {
+    .skills {
+        margin-top: 50px;
 
+        &_header {
+            font-size: 40px;
+        }
 
-// @media (max-width: 768px) {
-//     .skills {
-//         &_wrapper {
-//             &-card {
-
-//             }
-//         }
-//     }
-// }
+        &_subheader {
+            font-size: 20px;
+        }
+    }
+}

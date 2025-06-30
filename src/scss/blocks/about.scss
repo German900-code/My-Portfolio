@@ -6,7 +6,10 @@
     &_block {
         margin: 0 auto;
         text-align: center;
-        width: 800px;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+        // width: 800px;
     }
 
     &_header {
@@ -36,4 +39,18 @@
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .about {
+        &_header {
+            font-size: 35px;
+        }
+
+        &_subheader {
+            font-size: 20px;
+        }
+
+        &_text {
+            font-size: 20px;
+        }
+    }
+}

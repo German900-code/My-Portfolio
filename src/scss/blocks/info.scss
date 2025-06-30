@@ -19,7 +19,6 @@
         font-size: 63px;
         font-weight: 700;
         line-height: 95px;
-        letter-spacing: -6%;
     }
 
     &_position {
@@ -59,5 +58,18 @@
         //     color: var(--dark-color);
         //     background-color: #a0a2a4;
         // }
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+
+        &_name {
+            font-size: 39px;
+        }
+
+        &_position {
+            font-size: 23px;
+        }
     }
 }
