@@ -3,6 +3,7 @@
 .skills {
     margin-top: 170px;
     text-align: center;
+    scroll-margin-top: 110px;
 
     &_header {
         color: var(--main-title-color);
@@ -69,6 +70,31 @@
 
         &_subheader {
             font-size: 20px;
+        }
+
+        &_wrapper {
+            &-container {
+                flex-direction: column;
+                row-gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            &-card {
+                // width: 70%;
+            }
+
+            &-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            &-title {
+                font-size: 23px;
+            }
+
+            &-descr {
+                font-size: 17px;
+            }
         }
     }
 }

@@ -1,0 +1,59 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3 ease;
+    z-index: 9999;
+    animation: pulse 2s infinite ease-in-out;
+
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        filter: invert(0);
+    }
+
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &:hover img {
+        transform: scaleX(20px);
+        transition: transform 0.3s ease;
+    }
+
+    body.dark & {
+        filter: invert(1);
+    }
+}
+
+
+// .scroll-to-top img {
+//     filter: invert(0); // чёрная стрелка
+
+//     body.dark & {
+//         filter: invert(1); // белая стрелка на тёмной теме
+//     }
+// }

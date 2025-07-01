@@ -2,7 +2,8 @@
 @use '../basic/mixins.scss' as *;
 
 .info {
-    margin-top: 150px;
+    margin-top: 170px;
+    scroll-margin-top: 110px;
 
     img {
         margin: 0 auto;

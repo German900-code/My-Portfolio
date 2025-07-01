@@ -4,7 +4,7 @@
 
 .touch {
     margin-top: 150px;
-
+    scroll-margin-top: 110px;
 
     &_title {
         color: var(--dark-color);
@@ -161,7 +161,7 @@ input::placeholder {
         }
 
         &_form {
-            width: 80%;
+            width: 100%;
         }
     }
 

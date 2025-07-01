@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const menuLinks = document.querySelectorAll('.header_link');
     const body = document.body;
+    const scrollBtn = document.getElementById('scrollToTopBtn');
 
     const updateHamburgerIcon = () => {
         const isDark = body.classList.contains('dark');
@@ -132,6 +133,22 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('active');
             document.body.style.overflow = '';
             updateHamburgerIcon();
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 });
