@@ -23,13 +23,32 @@
           <a class="header_link header_link-menu" href="#skills">Skills</a>
           <a class="header_link header_link-menu" href="#projects">Projects</a>
         </nav>
-        <button class="header_div-btn">Contact</button>
+        <button class="header_div-btn" id="open">Contact</button>
         <button id="switch"><img id="theme-icon" src="./public/favicon/moon_icon.svg" alt="moon icon"></button>
         <button class="hamburger_menu" id="hamburger_menu"><img id="hamburger_icon"
             src="./public/favicon/hamburger_menu_black.svg" alt="hamburger menu"></button>
       </div>
     </div>
   </header>
+
+
+
+  <div class="modal_container" id="modal-container">
+    <div class="modal_block">
+      <button class="modal_button-close" id="modal_close">
+        <img class="modal_close-img" src="public/favicon/close_button.svg" alt="close button"></button>
+      <form class="modal_form" action="#">
+        <label class="modal_label">Your name
+          <input type="text" class="modal_input">
+        </label>
+        <label class="modal_label">
+          Your email
+          <input type="email" class="modal_input">
+        </label>
+        <button class="modal_button">Contact</button>
+      </form>
+    </div>
+  </div>
 
   <section class="info">
     <div class="container">
@@ -45,7 +64,7 @@
           the
           browser.</div>
       </div>
-      <button class="info_btn">Contact me</button>
+      <button class="info_btn" id="contact-button">Contact me</button>
     </div>
   </section>
 
@@ -231,7 +250,7 @@
         </div>
         <div class="footer_block-social">
           <a href="https://github.com/" class="footer_block-social-link" target="_blank" rel="noopener noreferrer"><img
-              class="footer_block-img" src="./public/favicon/github-icon.svg" alt="github"></a>
+              class="footer_block-img" id="github" src="./public/favicon/github-icon.svg" alt="github"></a>
           <a href="https://mail.google.com" class="footer_block-social-link" target="_blank"
             rel="noopener noreferrer"><img class="footer_block-img" src="./public/favicon/gmail-icon.svg"
               alt="gmail"></a>

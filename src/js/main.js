@@ -88,6 +88,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const menuLinks = document.querySelectorAll('.header_link');
     const body = document.body;
     const scrollBtn = document.getElementById('scrollToTopBtn');
+    const modalContainer = document.getElementById('modal-container');
+    const openModalButton = document.getElementById('open');
+    const contactOpenButton = document.getElementById('contact-button');
+    const closeModalButton = document.getElementById('modal_close');
 
     const updateHamburgerIcon = () => {
         const isDark = body.classList.contains('dark');
@@ -151,4 +155,55 @@ window.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+
+
+
+    function closeModalWithEscape(element) {
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && element.classList.contains('show')) {
+                document.body.classList.remove('no-scroll');
+                element.classList.remove('show');
+            }
+        });
+    }
+
+
+    function openModal(button, element) {
+        button.addEventListener('click', () => {
+            document.body.classList.add('no-scroll');
+            element.classList.add('show');
+        });
+    }
+
+    function closeModal(button, element) {
+        button.addEventListener('click', () => {
+            document.body.classList.remove('no-scroll');
+            element.classList.remove('show');
+        });
+    }
+
+    function closeOutsideModal(element) {
+        element.addEventListener('click', (e) => {
+            if (e.target === element) {
+                document.body.classList.remove('no-scroll');
+                element.classList.remove('show');
+            }
+        });
+    }
+
+    closeModalWithEscape(modalContainer);
+    openModal(openModalButton, modalContainer);
+    openModal(contactOpenButton, modalContainer);
+    closeModal(closeModalButton, modalContainer);
+    closeOutsideModal(modalContainer);
+    // openModalButton.addEventListener('click', () => {
+    //     document.body.classList.add('no-scroll');
+    //     modalContainer.classList.add('show');
+    // });
+
+    // closeModalButton.addEventListener('click', () => {
+    //     document.body.classList.remove('no-scroll');
+    //     modalContainer.classList.remove('show');
+    // });
 });

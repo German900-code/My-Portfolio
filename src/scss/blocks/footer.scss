@@ -20,6 +20,7 @@
         &-img {
             width: 40px;
             height: 40px;
+
         }
     }
 
@@ -30,6 +31,13 @@
         /* отступ между иконкой и текстом */
         font-family: Arial, sans-serif;
         font-size: 16px;
+    }
+}
+
+
+#github {
+    body.dark & {
+        filter: invert(1);
     }
 }
 
