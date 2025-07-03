@@ -197,13 +197,4 @@ window.addEventListener('DOMContentLoaded', () => {
     openModal(contactOpenButton, modalContainer);
     closeModal(closeModalButton, modalContainer);
     closeOutsideModal(modalContainer);
-    // openModalButton.addEventListener('click', () => {
-    //     document.body.classList.add('no-scroll');
-    //     modalContainer.classList.add('show');
-    // });
-
-    // closeModalButton.addEventListener('click', () => {
-    //     document.body.classList.remove('no-scroll');
-    //     modalContainer.classList.remove('show');
-    // });
 });
